@@ -18,12 +18,17 @@
     </header>
     
     <h2 class="text-center">Stack Over What?</h2>
-    <input type="text" class="form-control" placeholder="Buscar tema">
-   
+    
+    <!-- BARRA DE BÚSQUEDA -->
+     <div class="form-group" id="div-formulario">
+      <input type="search" class="form-control" placeholder="Buscar tema" id="barra-buscar">
+     </div>
+    <!-- FINALIZA DE BÚSQUEDA -->
     
     <table class="table table-striped table-responsive">
      <thead>
       <th>Tema</th>
+      <th>Mostrar Detalles:</th>
       <th>Publicado por:</th>
       <th>Respuestas</th>
      </thead>
@@ -39,7 +44,7 @@
      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Crear Tema</button>
 
         
-        <!-- Modal -->
+        <!-- Modal Crear Tema -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
               <form id="add-form">
@@ -53,19 +58,29 @@
                         <label for="nombre-tarea">Por:</label>
                         <input type="text" class="form-control" name="nombre" id="nombre-autor" placeholder="Autor">
                          <label for="nombre-tarea">Mensaje:</label>
-                        <input type="text" class="form-control" name="nombre" id="contenido-tema" placeholder="Mensaje">
-                      </div>
-                  </div>
+                        <textarea class="form-control" name="nombre" id="contenido-tema" placeholder="Mensaje">
+                        </textarea>
+                    </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-primary"> Agregar</button>
+                  </div>
                   </div>
                 </div>
               </form>
             </div>
           </div>
     
-    
+    <div class="modal fade bs-example-modal-sm"   tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content" id="inf-adicional">
+          <h4 id="nombreTexto"></h4>
+          <h4 id="contenido"></h4>
+          <h4 id="creado"></h4>
+          <h4 id="status"></h4>
+        </div>
+      </div>
+    </div>
     
    <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
    <script type="text/javascript" src="assets/js/app.js"></script>
